@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Mind Logic</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- BACKGROUND -->
+<div class="sky3d">
+<div class="sun"></div>
+
+<div class="cloud layer1" style="top:120px"></div>
+<div class="cloud layer1" style="top:180px"></div>
+
+<div class="cloud layer2" style="top:300px"></div>
+<div class="cloud layer2" style="top:360px"></div>
+
+<div class="cloud layer3" style="top:500px"></div>
+<div class="cloud layer3" style="top:560px"></div>
+
+<div class="bird bird1">🐦</div>
+<div class="bird bird2">🐦</div>
+</div>
+
+<h1 class="title">Mind Logic</h1>
+
+<!-- START -->
+<div id="startScreen" class="card">
+<h2>🧠 Mind Logic</h2>
+<input id="playerName" placeholder="Your name">
+<button onclick="startGame()">Start Game</button>
+</div>
+
+<!-- DESCRIPTION -->
+<div id="descScreen" class="hidden descPage">
+<h1 class="descTitle">Description</h1>
+<p class="descText">Answer the questions correctly.</p>
+<p class="descText">Each topic has 5 random questions.</p>
+<p class="descText"><b>You need 70% to pass.</b></p>
+<button onclick="showTopics()">Play</button>
+</div>
+
+<!-- TOPICS -->
+<div id="topicScreen" class="hidden topicPage">
+<h1 class="descTitle">Select Topic</h1>
+
+<div class="topicGrid">
+<div class="topicBox" onclick="selectTopic('probability')">Probability</div>
+<div class="topicBox" onclick="selectTopic('group')">Group Theory</div>
+<div class="topicBox" onclick="selectTopic('predicate')">Predicate Logic</div>
+<div class="topicBox" onclick="selectTopic('counting')">Counting Theory</div>
+</div>
+
+</div>
+
+<!-- QUIZ -->
+<div id="quizScreen" class="hidden gameUI">
+<h2 id="question"></h2>
+<div id="answers"></div>
+<button id="nextBtn" class="hidden" onclick="nextQuestion()">Next</button>
+</div>
+
+<!-- RESULT -->
+<div id="resultScreen" class="hidden resultBox">
+<h2 id="resultTitle"></h2>
+<p id="resultScore"></p>
+<button onclick="retryGame()">Try Again</button>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
